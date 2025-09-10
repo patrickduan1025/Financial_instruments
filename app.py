@@ -10,19 +10,22 @@ from lot import lot_page
 from NOP import nop_page
 from SL import long_short_page
 from swap import swap_page
+from EA import ea_page
+from XAU_XAG_sessions import xau_xag_market_page
+from routing_books import routing_books_page
 
 PAGE_KEYS = [
-    "Spread", "Balance & Equity", "Swap", "Types of Orders", "Scalping vs. Swing Trading",
-    "Pitfalls", "NOP", "Short & Long position", "Arbitrage", "Lot"
+    "Spread", "Balance & Equity", "Swap", "Types of Orders", "Scalping vs. Day Trade vs. Swing Trading",
+    "Pitfalls", "NOP", "Short & Long position", "Arbitrage", "Lot", "EA Intro","XAU/XAG Sessions", "Routing"
 ]
 PAGE_NAMES = {
     "en": [
-        "Spread", "Balance & Equity", "Swap", "Types of Orders", "Scalping vs. Swing Trading",
-        "Pitfalls", "NOP", "Short & Long position", "Arbitrage", "Lot"
+        "Spread", "Balance & Equity", "Swap", "Types of Orders", "Scalping vs. Day Trade vs. Swing Trading",
+        "Pitfalls", "NOP", "Short & Long position", "Arbitrage", "Lot", "EA Intro", "Gold & Silver Sessions", "AB Book & MM Routing"
     ],
     "zh": [
-        "点差", "账户余额与净值", "隔夜利息", "订单类型", "剥头皮与波段交易",
-        "注意事项", "净头寸(NOP)", "多空头", "套利", "手数"
+        "点差", "账户余额与净值", "隔夜利息", "订单类型", "剥头皮,日内交易与波段交易",
+        "注意事项", "净头寸(NOP)", "多空头", "套利", "手数", "EA 介绍", "黄金/白银市场时段", "AB-Book 与 MM 路由"
     ]
 }
 
@@ -31,8 +34,7 @@ SIDEBAR_TEXT = {
         "welcome": "### Welcome to Upway Global!",
         "desc": "Upway Global is a leading company in financial technologies. We provide cutting-edge solutions for trading and market analysis.",
         "website": "Visit our website",
-        "linkedin": "Follow us on LinkedIn",
-        "twitter": "Follow us on Twitter",
+
         "switch": "Switch to 中文",
         "select": "Select Page"
     },
@@ -40,8 +42,7 @@ SIDEBAR_TEXT = {
         "welcome": "### 欢迎来到 Upway Global!",
         "desc": "Upway Global 是金融科技领域的领先公司，专注于为交易和市场分析提供前沿解决方案。",
         "website": "访问我们的网站",
-        "linkedin": "关注我们的领英",
-        "twitter": "关注我们的推特",
+
         "switch": "切换到 English",
         "select": "选择页面"
     }
@@ -64,8 +65,6 @@ with st.sidebar:
     st.write(SIDEBAR_TEXT[lang]['welcome'])
     st.write(SIDEBAR_TEXT[lang]['desc'])
     st.markdown(f"[{SIDEBAR_TEXT[lang]['website']}](https://www.upwaygroup.com)")
-    st.markdown(f"[{SIDEBAR_TEXT[lang]['linkedin']}](https://www.linkedin.com/company/upwayglobal)")
-    st.markdown(f"[{SIDEBAR_TEXT[lang]['twitter']}](https://twitter.com/upwayglobal)")
     st.button(SIDEBAR_TEXT[lang]['switch'], on_click=toggle_language)
 
     st.selectbox(
@@ -85,7 +84,7 @@ elif st.session_state.page_selection == "Arbitrage":
     arbitrage_page()
 elif st.session_state.page_selection == "Types of Orders":
     order_types_page()
-elif st.session_state.page_selection == "Scalping vs. Swing Trading":
+elif st.session_state.page_selection == "Scalping vs. Day Trade vs. Swing Trading":
     scalping_vs_swing_trading_page()
 elif st.session_state.page_selection == "Pitfalls":
     pitfalls_page()
@@ -97,3 +96,12 @@ elif st.session_state.page_selection == "Short & Long position":
     long_short_page()
 elif st.session_state.page_selection == "Swap":
     swap_page()
+
+elif st.session_state.page_selection == "EA Intro":
+    ea_page()
+
+elif st.session_state.page_selection == "XAU/XAG Sessions":
+    xau_xag_market_page()
+
+elif st.session_state.page_selection == "Routing":
+    routing_books_page()
