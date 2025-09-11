@@ -58,7 +58,7 @@ def toggle_language():
 
 with st.sidebar:
     st.image(
-        'https://www.sequoiacap.com/wp-content/uploads/sites/6/2021/12/Upway_Logo_RGB_Electric_Blue.png', 
+        'https://www.upwaygroup.com/images/logo-en-white.svg', 
         use_container_width=True
     )
     lang = st.session_state.language
