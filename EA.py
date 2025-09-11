@@ -205,11 +205,11 @@ def ea_page():
     c1, c2 = st.columns(2)
     with c1:
         st.markdown(f"### {d['name']}")
-        st.markdown(f"**How it works / 原理：** {d['how']}")
-        st.markdown(f"**Best use / 适用：** {d['use']}")
+        st.markdown(f"**How it works ：** {d['how']}")
+        st.markdown(f"**Best use ：** {d['use']}")
     with c2:
-        st.markdown(f"**Risk / 风险要点：** {d['risk']}")
-        st.markdown(f"**Key metrics / 关键指标：** {d['metrics']}")
+        st.markdown(f"**Risk：** {d['risk']}")
+        st.markdown(f"**Key metrics：** {d['metrics']}")
 
     st.divider()
 
