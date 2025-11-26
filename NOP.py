@@ -11,6 +11,7 @@ def nop_page():
                 "Reflects your true net risk exposure per asset, crucial for risk management, compliance and reporting."
             ),
             "formula": "NOP = Σ(Long Positions) - Σ(Short Positions)",
+            "result": "Net Position (NOP)",
             "nop_table": "Net Open Position Overview",
             "product": "Instrument",
             "add_order": "Add Position",
@@ -40,6 +41,7 @@ def nop_page():
                 "真实反映每个品种的风险暴露，是风控与监管合规的核心指标。"
             ),
             "formula": "净持仓 = 多头持仓总和 − 空头持仓总和",
+            "result": "净持仓 (NOP)", # <--- ADD THIS
             "nop_table": "各品种净持仓总览",
             "product": "品种",
             "add_order": "添加持仓",
